@@ -11,7 +11,7 @@ const Contact = () => {
           <p className="section-subtitle">Have questions about ChitMaster? Our team is here to help you.</p>
         </div>
         
-        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', maxWidth: '1000px', margin: '0 auto' }}>
+        <div className="contact-grid">
           
           <div className="contact-info-list" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div className="contact-item" style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
@@ -49,8 +49,8 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="contact-form-card" style={{ background: 'white', padding: '2rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
-            <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="contact-form-card">
+            <form onSubmit={(e) => e.preventDefault()} className="contact-form">
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <label style={{ fontSize: '0.875rem', fontWeight: '500' }}>Full Name</label>
                 <input type="text" placeholder="John Doe" style={{ padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', outline: 'none' }} />

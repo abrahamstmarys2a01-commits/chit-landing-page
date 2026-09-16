@@ -41,36 +41,38 @@ const Reports = () => {
                   <button className="btn-sm btn-outline"><FileSpreadsheet size={16} /> Excel</button>
                 </div>
               </div>
-              <table className="dummy-table">
-                <thead>
-                  <tr>
-                    <th>Group</th>
-                    <th>Collected</th>
-                    <th>Due</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Gold Star G1</td>
-                    <td>₹4,50,000</td>
-                    <td>₹50,000</td>
-                    <td><span className="status-badge pending">Pending</span></td>
-                  </tr>
-                  <tr>
-                    <td>Silver G2</td>
-                    <td>₹2,00,000</td>
-                    <td>₹0</td>
-                    <td><span className="status-badge completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>Platinum G3</td>
-                    <td>₹8,00,000</td>
-                    <td>₹1,20,000</td>
-                    <td><span className="status-badge pending">Pending</span></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="table-responsive">
+                <table className="dummy-table">
+                  <thead>
+                    <tr>
+                      <th>Group</th>
+                      <th>Collected</th>
+                      <th>Due</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Gold Star G1</td>
+                      <td>₹4,50,000</td>
+                      <td>₹50,000</td>
+                      <td><span className="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td>Silver G2</td>
+                      <td>₹2,00,000</td>
+                      <td>₹0</td>
+                      <td><span className="status-badge completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                      <td>Platinum G3</td>
+                      <td>₹8,00,000</td>
+                      <td>₹1,20,000</td>
+                      <td><span className="status-badge pending">Pending</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
