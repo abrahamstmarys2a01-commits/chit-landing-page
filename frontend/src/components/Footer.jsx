@@ -1,5 +1,7 @@
 import React from 'react';
 import { Landmark, Globe, MessageCircle, Share2, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import logoImg from '../assets/logo.png';
 
 const Footer = () => {
   return (
@@ -7,8 +9,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-brand">
           <div className="logo">
-            <Landmark className="logo-icon" size={24} />
-            <span>ChitMaster</span>
+            <img src={logoImg} alt="ChitManager Logo" className="logo-img" />
           </div>
           <p className="footer-desc">
             The complete operating system for modern chit fund businesses.
@@ -24,23 +25,22 @@ const Footer = () => {
         <div className="footer-links">
           <div className="link-group">
             <h4>Product</h4>
-            <a href="#features">Features</a>
-            <a href="#reports">Reports</a>
-            <a href="#security">Security</a>
-            <a href="#">Pricing</a>
+            <Link to="/features">Features</Link>
+            <Link to="/reports">Reports</Link>
+            <Link to="/">Security</Link>
+            <Link to="/">Pricing</Link>
           </div>
           <div className="link-group">
             <h4>Company</h4>
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-            <a href="#">Blog</a>
-            <a href="#contact">Contact</a>
+            <Link to="/">About Us</Link>
+            <Link to="/">Careers</Link>
+            <Link to="/">Blog</Link>
+            <Link to="/contact">Contact</Link>
           </div>
           <div className="link-group">
             <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Data Processing</a>
+            <Link to="/">Privacy Policy</Link>
+            <Link to="/">Terms of Service</Link>
           </div>
         </div>
       </div>

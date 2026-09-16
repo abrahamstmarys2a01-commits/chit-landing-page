@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Landmark } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import logoImg from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,28 +25,27 @@ const Navbar = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Reports', href: '#reports' },
-    { name: 'Security', href: '#security' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', path: '/' },
+    { name: 'Features', path: '/features' },
+    { name: 'How It Works', path: '/how-it-works' },
+    { name: 'Reports', path: '/reports' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#" className="logo">
-          <Landmark className="logo-icon" />
-          <span>ChitMaster</span>
-        </a>
+        <Link to="/" className="logo">
+          <img src={logoImg} alt="ChitManager Logo" className="logo-img" />
+        </Link>
 
         <div className="nav-links desktop-nav">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="nav-link">
+            <Link key={link.name} to={link.path} className="nav-link">
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a href="#cta" className="btn btn-primary nav-btn">Get Started</a>
+          <Link to="/" className="btn btn-primary nav-btn">Get Started</Link>
         </div>
 
         <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
@@ -56,18 +57,18 @@ const Navbar = () => {
       {isOpen && (
         <div className="mobile-nav">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.name} 
-              href={link.href} 
+              to={link.path} 
               className="mobile-nav-link"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a href="#cta" className="btn btn-primary mobile-nav-btn" onClick={() => setIsOpen(false)}>
+          <Link to="/" className="btn btn-primary mobile-nav-btn" onClick={() => setIsOpen(false)}>
             Get Started
-          </a>
+          </Link>
         </div>
       )}
     </nav>
