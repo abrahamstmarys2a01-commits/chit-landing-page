@@ -18,7 +18,7 @@ const Contact = () => {
             </p>
           </div>
           <div className="contact-banner-image" style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={contactImg} alt="Support Agent" className="slide-in-right" style={{ maxWidth: '100%', height: 'auto', maxHeight: '450px' }} />
+            <img src={contactImg} alt="Support Agent" className="slide-in-right" style={{ maxWidth: '100%', height: 'auto', maxHeight: '450px', borderRadius: '12px' }} />
           </div>
         </div>
         
